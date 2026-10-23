@@ -1,0 +1,49 @@
+{
+  "appid": "touristappid",
+  "projectname": "EPP Mini Program",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "./",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "minified": true,
+    "uploadWithSourceMap": false
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "node_modules"
+      },
+      {
+        "type": "folder",
+        "value": "tests"
+      },
+      {
+        "type": "folder",
+        "value": ".github"
+      },
+      {
+        "type": "file",
+        "value": "build.mjs"
+      },
+      {
+        "type": "file",
+        "value": "contract-entry.js"
+      },
+      {
+        "type": "file",
+        "value": "config.example.js"
+      },
+      {
+        "type": "file",
+        "value": "package.json"
+      },
+      {
+        "type": "file",
+        "value": "pnpm-lock.yaml"
+      }
+    ],
+    "include": []
+  }
+}

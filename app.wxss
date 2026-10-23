@@ -1,0 +1,191 @@
+page {
+  background: #f7f7f8;
+  color: #18181b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+view,
+text,
+button,
+input {
+  box-sizing: border-box;
+}
+.page {
+  min-height: 100vh;
+  padding: 36rpx 32rpx calc(48rpx + env(safe-area-inset-bottom));
+  background: radial-gradient(
+    circle at top right,
+    rgba(216, 180, 254, 0.38),
+    transparent 640rpx
+  );
+  overflow-wrap: anywhere;
+}
+text {
+  display: block;
+  white-space: pre-wrap;
+}
+.page-header {
+  margin-bottom: 32rpx;
+}
+.kicker {
+  color: #6d28d9;
+  font-size: 24rpx;
+  font-weight: 800;
+  letter-spacing: 4rpx;
+}
+.title {
+  margin-top: 12rpx;
+  font-size: 64rpx;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2rpx;
+}
+.lede,
+.muted {
+  color: #52525b;
+}
+.lede {
+  margin-top: 20rpx;
+}
+.muted {
+  font-size: 28rpx;
+}
+.card,
+.expression-card {
+  margin: 24rpx 0;
+  padding: 40rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.82);
+  border-radius: 48rpx;
+  background: #fff;
+  box-shadow: 0 18rpx 55rpx rgba(24, 24, 27, 0.08);
+}
+.section-title {
+  font-size: 36rpx;
+  font-weight: 750;
+}
+.label {
+  margin-bottom: 12rpx;
+  color: #3f3f46;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.field {
+  margin-top: 24rpx;
+}
+.field:first-child {
+  margin-top: 0;
+}
+.section-heading {
+  margin: 32rpx 0 16rpx;
+  color: #52525b;
+  font-size: 28rpx;
+}
+input {
+  width: 100%;
+  height: 104rpx;
+  min-height: 104rpx;
+  padding: 0 28rpx;
+  border: 2rpx solid #d4d4d8;
+  border-radius: 28rpx;
+  background: #fff;
+  color: #18181b;
+  font-size: 32rpx;
+}
+button {
+  width: 100%;
+  min-height: 104rpx;
+  margin: 24rpx 0 0;
+  padding: 24rpx 28rpx;
+  border: 0;
+  border-radius: 28rpx;
+  font-size: 32rpx;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #fff;
+  background: #6d28d9;
+}
+button::after {
+  border: 0;
+}
+button[disabled] {
+  opacity: 0.58;
+  color: #fff;
+  background: #6d28d9;
+}
+button.button-secondary {
+  color: #5b21b6;
+  background: #f3e8ff;
+}
+button.button-quiet {
+  color: #6d28d9;
+  background: transparent;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+button.button-quiet[disabled],
+button.button-secondary[disabled] {
+  opacity: 0.58;
+}
+.expression-card {
+  color: #18181b;
+  text-align: left;
+  font-weight: 400;
+}
+.expression-name {
+  font-size: 36rpx;
+  font-weight: 750;
+  line-height: 1.4;
+}
+.expression-card .muted {
+  margin-top: 12rpx;
+}
+.card-action {
+  margin-top: 20rpx;
+  color: #6d28d9;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.notice {
+  margin: 24rpx 0;
+  padding: 24rpx 28rpx;
+  border-radius: 28rpx;
+  color: #4c1d95;
+  background: #f3e8ff;
+}
+.error {
+  color: #991b1b;
+  background: #fef2f2;
+}
+.badge {
+  display: inline-block;
+  margin-bottom: 20rpx;
+  padding: 8rpx 18rpx;
+  border-radius: 99rpx;
+  color: #5b21b6;
+  background: #f3e8ff;
+  font-size: 24rpx;
+  font-weight: 750;
+}
+.example {
+  margin-top: 12rpx;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  background: #fafafa;
+}
+.identifier {
+  margin-top: 12rpx;
+  color: #71717a;
+  font-size: 24rpx;
+}
+.verification {
+  font-size: 48rpx;
+  font-weight: 800;
+  letter-spacing: 8rpx;
+  color: #6d28d9;
+}
+.footnote {
+  margin-top: 32rpx;
+  font-size: 28rpx;
+  color: #71717a;
+}

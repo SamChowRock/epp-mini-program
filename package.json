@@ -1,0 +1,19 @@
+{
+  "name": "@epp/mini-program",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "@epp/contracts": "0.1.0-rc.2"
+  },
+  "devDependencies": {
+    "vite": "8.2.2"
+  }
+}

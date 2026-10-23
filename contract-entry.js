@@ -1,0 +1,17 @@
+export {
+  miniProgramSceneSchema,
+  miniProgramAuthenticatedResponseSchema,
+  miniProgramConfigResponseSchema,
+  miniProgramExchangeResponseSchema,
+  miniProgramListQuerySchema,
+  miniProgramListResponseSchema,
+  miniProgramRevokeResponseSchema,
+  miniProgramSessionResponseSchema,
+  miniProgramTicketCancelResponseSchema,
+  miniProgramTicketConfirmRequestSchema,
+  miniProgramTicketConfirmResponseSchema,
+  miniProgramTicketInspectRequestSchema,
+  miniProgramTicketInspectResponseSchema,
+  miniProgramUnitDetailSchema,
+  miniProgramUnitResponseSchema,
+} from "@epp/contracts/mini-program";

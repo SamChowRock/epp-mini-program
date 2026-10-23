@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="page-header"><text class="kicker">EPP</text><text class="title">登录网站</text><text class="lede muted">只确认本人浏览器发起的请求</text></view>
+  <text wx:if="{{error}}" class="notice error" role="alert">{{error}}</text>
+  <view class="card">
+    <text class="muted">粘贴从本人网站复制的登录码，再核对网站、用途和四位标识。不要确认他人发送的请求。</text>
+    <view class="field"><text class="label">网站登录码</text><input aria-label="网站登录码" value="{{scene}}" bindinput="input" maxlength="26" placeholder="粘贴从网站复制的登录码"/></view>
+    <button bindtap="open" disabled="{{busy}}">检查请求</button>
+    <button class="button-quiet" bindtap="scan">扫码读取登录码</button>
+  </view>
+  <button class="button-quiet" bindtap="home">返回星图</button>
+</view>

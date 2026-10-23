@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/star-map/index",
+    "pages/unit-detail/index",
+    "pages/web-request/index",
+    "pages/web-confirm/index",
+    "pages/identity/index",
+    "pages/account/index",
+    "pages/privacy/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "EPP 本地 Fake",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f7f7f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f7f8"
+  },
+  "tabBar": {
+    "color": "#71717a",
+    "selectedColor": "#6d28d9",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/star-map/index", "text": "星图" },
+      { "pagePath": "pages/account/index", "text": "账号" }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="page-header"><text class="kicker">EPP</text><text class="title">表达详情</text></view>
+  <text wx:if="{{error}}" class="notice error" role="alert">{{error}}</text>
+  <text wx:if="{{busy}}" class="notice">正在读取表达</text>
+  <view wx:if="{{unit}}" class="card">
+    <text class="badge">本人已采纳表达</text><text class="expression-name" selectable>{{unit.canonicalForm}}</text><text class="lede" selectable>{{unit.meaningZh}}</text>
+    <view class="field"><text class="label">其他形式</text><text wx:for="{{unit.forms}}" wx:key="*this" selectable>{{item}}</text></view>
+    <view class="field"><text class="label">表达意图</text><text>{{unit.languageFunction}}</text></view>
+    <view class="field"><text class="label">使用边界</text><text>{{unit.usageBoundary}}</text></view>
+    <view class="field"><text class="label">例句</text><text class="example" selectable>{{unit.example}}</text></view>
+    <text class="identifier">更新：{{unit.updatedAt}}</text>
+    <button class="button-secondary" bindtap="copy">复制表达</button>
+  </view>
+  <button wx:if="{{error}}" bindtap="retry" disabled="{{busy}}">重试读取</button>
+  <button class="button-quiet" bindtap="home">返回星图</button>
+</view>

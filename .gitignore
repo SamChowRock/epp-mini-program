@@ -1,0 +1,8 @@
+node_modules/
+contracts/
+config.js
+project.private.config.json
+.env*
+.npmrc
+*.log
+.DS_Store

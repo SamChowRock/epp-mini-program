@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="page-header"><text class="kicker">EPP</text><text class="title">账号</text><text class="lede muted">管理本次小程序登录</text></view>
+  <text wx:if="{{error}}" class="notice error" role="alert">{{error}}</text>
+  <view class="card"><text class="label">当前账号</text>
+    <view wx:if="{{session}}"><text class="section-title">{{session.user.displayName}}</text><text class="identifier">{{session.user.id}}</text></view><text wx:else class="muted">尚未登录</text>
+    <text class="lede muted">小程序会话与网页会话独立。退出小程序不会退出已经登录的网页；网页“微信关联”可逐项撤销小程序会话。</text>
+    <button wx:if="{{!session}}" bindtap="login" disabled="{{busy}}">同意说明并登录（Fake）</button><button wx:else class="button-quiet" bindtap="logout" disabled="{{busy}}">退出当前小程序会话</button>
+  </view>
+  <view class="card"><text class="section-title">隐私与支持</text><text class="lede muted">查看本地版本的隐私说明和支持联系方式。</text><button class="button-secondary" bindtap="privacy">隐私与支持</button></view>
+  <view wx:if="{{logoutFailed}}" class="notice error"><text>服务端撤销未确认。可重试退出，或选择仅清除本机凭据；远端会话可能仍有效。</text><button class="button-quiet" bindtap="clearLocal" disabled="{{busy}}">仅清除本机登录</button></view>
+  <button class="button-quiet" bindtap="website">登录网站</button>
+</view>

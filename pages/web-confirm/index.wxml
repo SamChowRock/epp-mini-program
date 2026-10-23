@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="page-header"><text class="kicker">EPP</text><text class="title">核对网站请求</text></view>
+  <text wx:if="{{error}}" class="notice error" role="alert">{{error}}</text>
+  <view wx:if="{{!ready}}" class="card"><text>请先阅读说明并登录，随后仍需再次核对和确认。</text><button bindtap="login" disabled="{{busy}}">同意并登录（Fake）</button><button class="button-quiet" bindtap="privacy">隐私说明</button></view>
+  <view wx:if="{{ticket}}" class="card">
+    <text class="badge">{{ticket.purpose === 'account_disposal_reauth' ? '核验网站注销请求' : ticket.purpose === 'login' ? '登录网站' : '关联已有网站账号'}}</text>
+    <view class="field"><text class="label">请求站点</text><text>{{ticket.siteOrigin}}</text><text class="muted">当前服务站点：{{siteOrigin}}</text></view>
+    <view class="field"><text class="label">核对标识</text><text class="verification">{{ticket.verificationLabel}}</text></view>
+    <view wx:if="{{ticket.targetAccount}}" class="field"><text class="label">目标账号</text><text>{{ticket.targetAccount.displayName}}（{{ticket.targetAccount.accountHint}}）</text></view>
+    <view class="field"><text class="label">请求状态</text><text>{{ticket.status}} · 剩余 {{remaining}} 秒</text></view>
+    <text class="identifier">设备：{{ticket.deviceHint}}</text><text class="identifier">创建：{{ticket.createdAt}}</text>
+    <text wx:if="{{ticket.purpose === 'link'}}" class="notice">此操作将当前微信身份关联到上述网站账号，不合并账号。</text>
+    <text wx:elif="{{ticket.purpose === 'account_disposal_reauth'}}" class="notice">仅核验身份，仍须在网站最终确认。这里不会注销账号。</text>
+    <text wx:else class="notice">只登录网站，不授予 MCP 权限，也不采纳任何表达。</text>
+    <button wx:if="{{ticket.status === 'PENDING' && remaining > 0}}" disabled="{{busy}}" bindtap="confirm">确认上述{{ticket.purpose === 'account_disposal_reauth' ? '身份核验' : ticket.purpose === 'login' ? '登录' : '关联'}}</button>
+    <button wx:if="{{ticket.status === 'PENDING' || ticket.status === 'CONFIRMED'}}" class="button-quiet" disabled="{{busy}}" bindtap="cancel">取消请求</button>
+    <button class="button-secondary" bindtap="refresh" disabled="{{busy}}">重新检查状态</button>
+  </view>
+  <button class="button-quiet" bindtap="home">返回星图</button>
+</view>
