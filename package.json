@@ -11,7 +11,7 @@
     "test": "node --test tests/*.test.cjs"
   },
   "dependencies": {
-    "@epp/contracts": "0.1.0-rc.2"
+    "@szepp/contracts": "0.1.0-rc.2"
   },
   "devDependencies": {
     "vite": "8.2.2"

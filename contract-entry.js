@@ -14,4 +14,4 @@ export {
   miniProgramTicketInspectResponseSchema,
   miniProgramUnitDetailSchema,
   miniProgramUnitResponseSchema,
-} from "@epp/contracts/mini-program";
+} from "@szepp/contracts/mini-program";

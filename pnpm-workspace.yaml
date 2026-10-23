@@ -1,2 +1,4 @@
 packages:
   - .
+minimumReleaseAgeExclude:
+  - '@szepp/contracts@0.1.0-rc.2'

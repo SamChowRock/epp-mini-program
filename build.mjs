@@ -10,6 +10,6 @@ await build({
     outDir: "contracts",
     emptyOutDir: true,
     lib: { entry: fileURLToPath(new URL("./contract-entry.js", import.meta.url)), formats: ["cjs"], fileName: () => "index.js" },
-    rollupOptions: { output: { inlineDynamicImports: true } },
+    rolldownOptions: { output: { codeSplitting: false } },
   },
 });
