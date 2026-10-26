@@ -17,7 +17,7 @@
       <text wx:if="{{busy}}" class="notice">正在读取星图</text>
       <text class="section-heading">当前结果：{{submittedQ || '全部已采纳表达'}}</text>
       <button class="expression-card" wx:for="{{rows}}" wx:key="id" data-id="{{item.id}}" bindtap="detail"><text class="expression-name">{{item.canonicalForm}}</text><text class="muted">{{item.meaningZh}}</text><text class="card-action">查看详情</text></button>
-      <text wx:if="{{!rows.length && !busy}}" class="card muted">{{submittedQ ? '没有找到匹配表达，请清空关键词后重试。' : '还没有已采纳表达。请先在 EPP 网站采纳表达，再回来查看。'}}</text>
+      <text wx:if="{{!rows.length && !busy}}" class="card muted">{{submittedQ ? '没有找到匹配表达，请清空关键词后重试。' : '还没有已采纳表达。请在 Agent 中使用 EPP 记录并确认想学的表达，再回来查看。'}}</text>
       <button wx:if="{{nextCursor}}" class="button-secondary" bindtap="more" disabled="{{busy}}">加载更多</button>
       <text wx:if="{{rows.length && !nextCursor && !busy}}" class="footnote">已显示全部表达</text>
       <button class="button-quiet" bindtap="copySite">复制网站地址</button>
